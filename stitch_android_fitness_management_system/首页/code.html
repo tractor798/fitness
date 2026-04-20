@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic | 健身仪表盘</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;family=Noto+Sans+SC:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffc788",
+                        "on-tertiary": "#fff2d1",
+                        "surface": "#f5f6f7",
+                        "primary-fixed": "#ff8f06",
+                        "on-background": "#2c2f30",
+                        "secondary": "#825000",
+                        "on-primary-fixed-variant": "#532b00",
+                        "surface-container-low": "#eff1f2",
+                        "inverse-surface": "#0c0f10",
+                        "on-secondary-fixed": "#4d2d00",
+                        "on-surface": "#2c2f30",
+                        "on-secondary": "#fff0e4",
+                        "surface-container": "#e6e8ea",
+                        "inverse-on-surface": "#9b9d9e",
+                        "on-primary-container": "#462300",
+                        "tertiary-fixed": "#fdd43b",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#ec8300",
+                        "secondary-container": "#ffc788",
+                        "tertiary": "#6e5900",
+                        "on-primary": "#fff0e6",
+                        "on-tertiary-fixed": "#453700",
+                        "primary-dim": "#7a4100",
+                        "inverse-primary": "#ff8f06",
+                        "secondary-dim": "#724600",
+                        "error-container": "#f95630",
+                        "surface-dim": "#d1d5d7",
+                        "error": "#b02500",
+                        "on-surface-variant": "#595c5d",
+                        "primary-container": "#ff8f06",
+                        "on-secondary-fixed-variant": "#734700",
+                        "tertiary-container": "#fdd43b",
+                        "on-error-container": "#520c00",
+                        "surface-container-highest": "#dadddf",
+                        "on-secondary-container": "#673e00",
+                        "on-primary-fixed": "#1e0c00",
+                        "surface-variant": "#dadddf",
+                        "surface-bright": "#f5f6f7",
+                        "on-tertiary-fixed-variant": "#665200",
+                        "outline": "#757778",
+                        "secondary-fixed-dim": "#ffb558",
+                        "tertiary-dim": "#604e00",
+                        "surface-container-high": "#e0e3e4",
+                        "surface-tint": "#8b4b00",
+                        "outline-variant": "#abadae",
+                        "background": "#f5f6f7",
+                        "primary": "#8b4b00",
+                        "on-error": "#ffefec",
+                        "error-dim": "#b92902",
+                        "tertiary-fixed-dim": "#eec62c",
+                        "on-tertiary-container": "#5b4900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "2xl": "2rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Lexend", "Noto Sans SC"],
+                        "body": ["Inter", "Noto Sans SC"],
+                        "label": ["Inter", "Noto Sans SC"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+        .font-headline { font-family: 'Lexend', 'Noto Sans SC', sans-serif; }
+        .circular-progress {
+            transition: stroke-dashoffset 0.85s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32 font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-6 h-20 bg-surface/80 backdrop-blur-xl border-b border-outline/5">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:bg-surface-container transition-all p-2 rounded-full active:scale-95 duration-200">
+                menu
+            </button>
+<span class="text-xl font-black italic tracking-tighter text-primary font-headline">KINETIC</span>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-outline/10 shadow-sm">
+<img alt="Profile" data-alt="Close up portrait of a smiling athletic woman with hair tied back, natural outdoor lighting, professional sports profile aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxTjcyS1sC76qC-Yt_yu6ixWk58lZQgiLQ5sJPNXTDtWL9bsLn5WdlQg9yVIUUNhVo-1aOJVFB0gbDuPui0Ld-MRs0ssZ1PW_f-TAN9Q5br85Hb4wYAxI8sg-i1v1aeVPxLUt4PdcrOg_5Zy-2_rosEqaklL719Uu4UMDcYgtXs5dxR0O_cxZ36QGGUvFcl08lbzrt2U8iLxB_Ydexk-aDv1WDW4iKU-6i2PWrrT6SngBFuoQqN3pLbNfHMLjKInu5LYq5gBeuQxD-"/>
+</div>
+</header>
+<main class="pt-28 px-6 max-w-2xl mx-auto space-y-10">
+<!-- Welcome Section -->
+<section class="space-y-1">
+<p class="text-on-surface-variant font-medium tracking-[0.2em] text-[10px] uppercase">每日表现</p>
+<h1 class="text-4xl font-headline font-extrabold tracking-tight text-on-surface">你好, Alex</h1>
+</section>
+<!-- Main Stats - Clean Bento Grid -->
+<div class="grid grid-cols-6 gap-5">
+<!-- Daily Steps - Premium Focus -->
+<div class="col-span-6 bg-surface-container-lowest p-10 rounded-2xl shadow-sm border border-outline/5 relative overflow-hidden flex flex-col items-center">
+<div class="relative flex items-center justify-center w-52 h-52">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container" cx="104" cy="104" fill="transparent" r="92" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary circular-progress" cx="104" cy="104" fill="transparent" r="92" stroke="currentColor" stroke-dasharray="578.05" stroke-dashoffset="144.51" stroke-width="10" style="stroke-linecap: round;"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-6xl font-headline font-black tracking-tighter">8,432</span>
+<span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-[0.15em] mt-2">今日步数</span>
+</div>
+</div>
+<div class="mt-10 grid grid-cols-2 gap-4 w-full">
+<div class="bg-surface p-5 rounded-2xl border border-outline/5 flex flex-col items-center">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">目标</span>
+<span class="font-headline font-bold text-xl">10,000</span>
+</div>
+<div class="bg-surface p-5 rounded-2xl border border-outline/5 flex flex-col items-center">
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-1">剩余</span>
+<span class="font-headline font-bold text-xl">1,568</span>
+</div>
+</div>
+</div>
+<!-- Active Calories -->
+<div class="col-span-3 bg-surface-container-lowest p-6 rounded-2xl border border-outline/5 flex flex-col justify-between aspect-[1/1.1]">
+<div class="h-10 w-10 rounded-xl bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div class="space-y-1">
+<span class="text-3xl font-headline font-bold tracking-tight block">482</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">活跃热量</span>
+</div>
+</div>
+<!-- Workout Time -->
+<div class="col-span-3 bg-surface-container-lowest p-6 rounded-2xl border border-outline/5 flex flex-col justify-between aspect-[1/1.1]">
+<div class="h-10 w-10 rounded-xl bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">timer</span>
+</div>
+<div class="space-y-1">
+<span class="text-3xl font-headline font-bold tracking-tight block">45</span>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-widest">训练时长</span>
+</div>
+</div>
+</div>
+<!-- Quick Action Section -->
+<section class="space-y-4">
+<h3 class="text-[10px] font-bold font-headline tracking-[0.2em] text-on-surface-variant uppercase px-1">快速行动</h3>
+<button class="w-full h-24 rounded-2xl overflow-hidden relative group active:scale-[0.98] transition-all duration-300">
+<div class="absolute inset-0 bg-primary"></div>
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;q=80&amp;w=800')] bg-cover bg-center opacity-40 mix-blend-overlay grayscale group-hover:scale-105 transition-transform duration-700" data-alt="Dynamic wide shot of a modern dark gym with high-end equipment"></div>
+<div class="relative h-full flex items-center justify-between px-8">
+<div class="text-left">
+<h4 class="text-on-primary font-headline font-bold text-xl tracking-tight">开始训练</h4>
+<p class="text-on-primary/70 text-[10px] font-medium tracking-wide mt-1">从您的个性化计划中选择</p>
+</div>
+<div class="h-12 w-12 rounded-full bg-on-primary/20 backdrop-blur-md flex items-center justify-center text-on-primary border border-on-primary/10">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+</div>
+</button>
+</section>
+<!-- Weekly Activity Mini Chart -->
+<section class="bg-surface-container-lowest p-8 rounded-2xl border border-outline/5">
+<div class="flex justify-between items-start mb-10">
+<div>
+<h3 class="text-sm font-bold font-headline tracking-wide text-on-surface">本周趋势</h3>
+<p class="text-[10px] font-medium text-primary uppercase tracking-widest mt-1">+12% 较上周</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-xl">trending_up</span>
+</div>
+<div class="flex items-end justify-between h-24 gap-3">
+<div class="flex-1 bg-surface-container rounded-full h-[40%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-surface-container rounded-full h-[60%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-surface-container rounded-full h-[30%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-primary rounded-full h-[85%] shadow-lg shadow-primary/20"></div>
+<div class="flex-1 bg-surface-container rounded-full h-[55%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-surface-container rounded-full h-[70%] transition-all hover:bg-primary/20"></div>
+<div class="flex-1 bg-surface-container rounded-full h-[45%] transition-all hover:bg-primary/20"></div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar - Minimalist -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pt-3 pb-8 bg-surface/90 backdrop-blur-2xl border-t border-outline/5">
+<!-- Dashboard (Active) -->
+<a class="flex flex-col items-center justify-center text-primary group" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">grid_view</span>
+<span class="text-[9px] font-bold uppercase tracking-[0.2em] mt-1.5">首页</span>
+</a>
+<!-- Plans -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/50 hover:text-on-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">fitness_center</span>
+<span class="text-[9px] font-bold uppercase tracking-[0.2em] mt-1.5">计划</span>
+</a>
+<!-- Progress -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/50 hover:text-on-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+<span class="text-[9px] font-bold uppercase tracking-[0.2em] mt-1.5">数据</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant/50 hover:text-on-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl">person</span>
+<span class="text-[9px] font-bold uppercase tracking-[0.2em] mt-1.5">我的</span>
+</a>
+</nav>
+</body></html>

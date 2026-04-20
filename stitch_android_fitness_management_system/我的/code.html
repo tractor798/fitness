@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffc788",
+                    "on-tertiary": "#fff2d1",
+                    "surface": "#fafaf9",
+                    "primary-fixed": "#ff8f06",
+                    "on-background": "#1c1917",
+                    "secondary": "#825000",
+                    "on-primary-fixed-variant": "#532b00",
+                    "surface-container-low": "#f5f5f4",
+                    "inverse-surface": "#1c1917",
+                    "on-secondary-fixed": "#4d2d00",
+                    "on-surface": "#292524",
+                    "on-secondary": "#fff0e4",
+                    "surface-container": "#e7e5e4",
+                    "inverse-on-surface": "#a8a29e",
+                    "on-primary-container": "#462300",
+                    "tertiary-fixed": "#fdd43b",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#ec8300",
+                    "secondary-container": "#ffc788",
+                    "tertiary": "#6e5900",
+                    "on-primary": "#fff0e6",
+                    "on-tertiary-fixed": "#453700",
+                    "primary-dim": "#7a4100",
+                    "inverse-primary": "#ff8f06",
+                    "secondary-dim": "#724600",
+                    "error-container": "#fef2f2",
+                    "surface-dim": "#e7e5e4",
+                    "error": "#b91c1c",
+                    "on-surface-variant": "#78716c",
+                    "primary-container": "#ff8f06",
+                    "on-secondary-fixed-variant": "#734700",
+                    "tertiary-container": "#fdd43b",
+                    "on-error-container": "#7f1d1d",
+                    "surface-container-highest": "#d6d3d1",
+                    "on-secondary-container": "#673e00",
+                    "on-primary-fixed": "#1e0c00",
+                    "surface-variant": "#e7e5e4",
+                    "surface-bright": "#fafaf9",
+                    "on-tertiary-fixed-variant": "#665200",
+                    "outline": "#a8a29e",
+                    "secondary-fixed-dim": "#ffb558",
+                    "tertiary-dim": "#604e00",
+                    "surface-container-high": "#f5f5f4",
+                    "surface-tint": "#8b4b00",
+                    "outline-variant": "#d6d3d1",
+                    "background": "#fafaf9",
+                    "primary": "#8b4b00",
+                    "on-error": "#ffffff",
+                    "error-dim": "#ef4444",
+                    "tertiary-fixed-dim": "#eec62c",
+                    "on-tertiary-container": "#5b4900"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.5rem",
+                    "lg": "0.75rem",
+                    "xl": "1rem",
+                    "2xl": "1.5rem",
+                    "3xl": "2rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Lexend", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        h1, h2, h3, .headline { font-family: 'Lexend', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-white/70 backdrop-blur-xl border-b border-stone-200/50">
+<div class="flex items-center gap-4">
+<button class="p-2 text-stone-600 hover:bg-stone-100 rounded-full transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-black italic tracking-tighter text-stone-900 font-headline">KINETIC</h1>
+</div>
+<div class="w-9 h-9 rounded-full overflow-hidden border border-stone-200 shadow-sm">
+<img alt="User avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC99BB__VRfSj43mDLShPd_Gy-a-QZyUbEYL6aLP_NbKd_39ciu5kr_wfGYKxX78_Jwe01bw-ltv_Fif-2u9SsfaDL5PXNkYGgK8y3TrjN8fYYiM8TU5anoCKCpG3PHdIJGSlrIDO5Muf-9BSl7prsyKp5BhSHDcBm0wtkpOnFSa-6r43eVHm1XgIWa_oMdtwe-N64LguH2AZsHi0jPqyvng05mRflLGYhZPduW1t7GNHA5wKNDwW7N62IoZAMss75av_oJruHxvPga"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-xl mx-auto">
+<!-- Hero Profile Section -->
+<section class="flex flex-col items-center text-center mb-12">
+<div class="relative mb-5">
+<div class="w-28 h-28 rounded-full overflow-hidden ring-1 ring-stone-200 p-1.5 bg-white shadow-lg">
+<img alt="Alex Rivera" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCanon6ZvpbUpeAWuJpaBjy2A0YejZ8Y4fZ0JNTlGbJhQxbtHa7_uud7hRuZjNOKEN2dsIpIM_vtvZBGbLt9Ea7GHU9St0UROxXNJ4fUDwElDk_xBZYC4XcVf_kI9-9RrbebQJAZ4PM3aSGTnSc0XNOLz_57e_HoAjOgYKMQBELjcAMUxGFPXx1BTQAamD1jZHQ2qMHs2uS2PoOBu1jN-Y0_6nZeRIuXmFwivreYSTE-hTkqkaTkekguG4OSfs6LYbOoQ_mg_RTWei2"/>
+</div>
+<button class="absolute bottom-1 right-1 bg-white text-stone-800 w-8 h-8 rounded-full flex items-center justify-center shadow-md border border-stone-100 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<h2 class="text-2xl font-bold tracking-tight text-stone-900 mb-0.5">Alex Rivera</h2>
+<p class="text-stone-500 text-sm font-medium">Pro Member since 2023</p>
+</section>
+<!-- Fitness Goals - Editorial Style -->
+<section class="mb-10">
+<h3 class="text-[11px] font-bold uppercase tracking-[0.15em] text-stone-400 mb-4 px-1">当前目标</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white p-5 rounded-2xl border border-stone-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<span class="material-symbols-outlined text-stone-400 mb-3 block" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<p class="text-[10px] uppercase font-bold tracking-widest text-stone-400 mb-1">目标</p>
+<p class="text-base font-bold headline text-stone-800">减重</p>
+<div class="mt-4 h-1.5 w-full bg-stone-100 rounded-full overflow-hidden">
+<div class="h-full bg-stone-800 w-[75%] rounded-full"></div>
+</div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-stone-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)]">
+<span class="material-symbols-outlined text-stone-400 mb-3 block" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<p class="text-[10px] uppercase font-bold tracking-widest text-stone-400 mb-1">训练频率</p>
+<p class="text-base font-bold headline text-stone-800">每周 5 天</p>
+<div class="mt-4 flex gap-1.5">
+<div class="h-1.5 flex-1 bg-stone-800 rounded-full"></div>
+<div class="h-1.5 flex-1 bg-stone-800 rounded-full"></div>
+<div class="h-1.5 flex-1 bg-stone-800 rounded-full"></div>
+<div class="h-1.5 flex-1 bg-stone-800 rounded-full"></div>
+<div class="h-1.5 flex-1 bg-stone-100 rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Settings List -->
+<section class="space-y-6">
+<div>
+<h3 class="text-[11px] font-bold uppercase tracking-[0.15em] text-stone-400 mb-4 px-1">账户设置</h3>
+<div class="bg-white rounded-2xl border border-stone-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden">
+<!-- Notifications -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-stone-50 transition-colors text-left border-b border-stone-50 group">
+<div class="w-10 h-10 rounded-xl bg-stone-50 flex items-center justify-center text-stone-600 group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-stone-800 text-sm">通知</p>
+<p class="text-xs text-stone-400">提醒、警报与声音</p>
+</div>
+<span class="material-symbols-outlined text-stone-300">chevron_right</span>
+</button>
+<!-- Connected Apps -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-stone-50 transition-colors text-left border-b border-stone-50 group">
+<div class="w-10 h-10 rounded-xl bg-stone-50 flex items-center justify-center text-stone-600 group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined">link</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-stone-800 text-sm">关联应用</p>
+<p class="text-xs text-stone-400">Google Fit, Strava, Apple Health</p>
+</div>
+<span class="material-symbols-outlined text-stone-300">chevron_right</span>
+</button>
+<!-- Privacy -->
+<button class="w-full flex items-center gap-4 px-5 py-4 hover:bg-stone-50 transition-colors text-left group">
+<div class="w-10 h-10 rounded-xl bg-stone-50 flex items-center justify-center text-stone-600 group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined">security</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-stone-800 text-sm">隐私与安全</p>
+<p class="text-xs text-stone-400">数据共享与账户访问</p>
+</div>
+<span class="material-symbols-outlined text-stone-300">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Danger Zone -->
+<button class="w-full flex items-center gap-4 px-5 py-4 bg-error-container text-left group rounded-2xl border border-red-100/50 hover:bg-red-100/50 transition-colors">
+<div class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-error group-active:scale-95 transition-transform">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-error text-sm">退出登录</p>
+</div>
+</button>
+</section>
+<!-- Extra Editorial Content -->
+<section class="mt-12 bg-stone-900 text-stone-100 p-8 rounded-3xl relative overflow-hidden shadow-2xl shadow-stone-400/20">
+<div class="relative z-10">
+<h4 class="headline text-2xl font-black italic tracking-tight mb-2">BECOME A LEGEND</h4>
+<p class="text-sm text-stone-400 max-w-[200px] mb-8 font-medium leading-relaxed">解锁高级生物识别和个人教练工具。</p>
+<button class="bg-white text-stone-900 px-8 py-3 rounded-full font-bold text-sm active:scale-95 transition-transform shadow-lg">
+                    成为精英会员
+                </button>
+</div>
+<div class="absolute -right-6 -bottom-6 w-48 h-48 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[190px]" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-3 pb-8 bg-white/80 backdrop-blur-2xl border-t border-stone-100">
+<div class="flex flex-col items-center justify-center text-stone-400 px-4 py-1 hover:text-stone-900 transition-colors duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[26px]">dashboard</span>
+<span class="text-[9px] font-bold uppercase tracking-wider mt-1">控制面板</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 px-4 py-1 hover:text-stone-900 transition-colors duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[26px]">fitness_center</span>
+<span class="text-[9px] font-bold uppercase tracking-wider mt-1">训练计划</span>
+</div>
+<div class="flex flex-col items-center justify-center text-stone-400 px-4 py-1 hover:text-stone-900 transition-colors duration-200 cursor-pointer">
+<span class="material-symbols-outlined text-[26px]">insights</span>
+<span class="text-[9px] font-bold uppercase tracking-wider mt-1">进度统计</span>
+</div>
+<!-- Active Tab: Profile -->
+<div class="flex flex-col items-center justify-center text-stone-900 px-4 py-1 cursor-pointer">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="text-[9px] font-bold uppercase tracking-wider mt-1">个人中心</span>
+</div>
+</nav>
+</body></html>

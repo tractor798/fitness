@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-surface-variant": "#5b403d",
+                "surface-tint": "#b91d1c",
+                "secondary-fixed-dim": "#ffb4ab",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "on-tertiary-fixed": "#00201e",
+                "on-secondary-container": "#75221c",
+                "on-error-container": "#93000a",
+                "surface-container-lowest": "#ffffff",
+                "tertiary-fixed-dim": "#5fd9d0",
+                "error-container": "#ffdad6",
+                "on-surface": "#191c1e",
+                "inverse-surface": "#2e3132",
+                "surface-dim": "#d9dadc",
+                "secondary": "#9e4038",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "surface-variant": "#e1e2e4",
+                "on-primary-fixed-variant": "#93000a",
+                "outline": "#8f706c",
+                "secondary-container": "#fe8a7d",
+                "primary": "#b51a1a",
+                "surface-container-low": "#f2f4f6",
+                "secondary-fixed": "#ffdad6",
+                "background": "#f8f9fb",
+                "on-primary-container": "#fffbff",
+                "on-primary": "#ffffff",
+                "surface-container-highest": "#e1e2e4",
+                "surface-bright": "#f8f9fb",
+                "tertiary-container": "#00837c",
+                "primary-fixed-dim": "#ffb4ab",
+                "on-tertiary-container": "#f3fffd",
+                "tertiary": "#006762",
+                "surface-container": "#edeef0",
+                "outline-variant": "#e4beb9",
+                "surface-container-high": "#e7e8ea",
+                "primary-fixed": "#ffdad6",
+                "on-secondary-fixed-variant": "#7f2923",
+                "on-primary-fixed": "#410002",
+                "inverse-on-surface": "#f0f1f3",
+                "on-secondary-fixed": "#410002",
+                "on-background": "#191c1e",
+                "primary-container": "#d93630",
+                "tertiary-fixed": "#7ef6ec",
+                "on-tertiary-fixed-variant": "#00504c",
+                "surface": "#f8f9fb",
+                "inverse-primary": "#ffb4ab"
+            },
+            "borderRadius": {
+                "DEFAULT": "1rem",
+                "lg": "2rem",
+                "xl": "3rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans", "PingFang SC Medium"],
+                "body": ["Manrope", "PingFang SC Regular"],
+                "label": ["Manrope", "PingFang SC Medium"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', 'PingFang SC Regular', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .headline-font {
+            font-family: 'Plus Jakarta Sans', 'PingFang SC Medium', sans-serif;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-low text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl docked full-width top-0 z-50 fixed w-full flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300 rounded-full p-2 active:scale-95">menu</button>
+<h1 class="headline-font text-xl font-bold text-red-700 dark:text-red-500 tracking-tight">数据追踪</h1>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-on-surface-variant text-xs font-medium bg-surface-container px-3 py-1 rounded-full">本地存储模式</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-white">
+<img alt="User Avatar" data-alt="Portrait of a healthy smiling person with soft natural lighting and minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQun5IgrzOGDCMuZC1gvs69Uyrsw5mS3Bwodky764rq5Emr-XT0JtohqIa1teSmezrDSKxvPziSAIOtFQrhw9hadTDkSLsGtzVEffox3S-5QTmExx9U1TSZYBJOKMSB7MVr4bFAHZriFzZ20-cfsKQAdyHhSFjoMVa2xXjkmBqGhTV3SxKVxESt3xU5PFLs-6SMJ8R_dA4C_tjK_ncjWqgN4ABRxEZSMkjKSPc8twlU42vgqkZ8wvkQ_D7T9S5JSTjZaCeqFE2NN20"/>
+</div>
+</div>
+</header>
+<main class="max-w-xl mx-auto px-5 pt-24 space-y-8">
+<!-- Section 1: Quick Entry -->
+<section class="space-y-4">
+<div class="flex justify-between items-end px-2">
+<div>
+<h2 class="headline-font text-2xl font-bold tracking-tight">快速记录</h2>
+<p class="text-on-surface-variant text-sm">今日尚未更新数据</p>
+</div>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm flex flex-col gap-6">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest pl-1">体重 (KG)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-full py-4 px-6 text-xl font-bold text-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="72.5" type="number"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest pl-1">体脂率 (%)</label>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-none rounded-full py-4 px-6 text-xl font-bold text-primary focus:ring-2 focus:ring-primary/20 transition-all" placeholder="18.5" type="number"/>
+</div>
+</div>
+</div>
+<button class="w-full bg-gradient-to-br from-[#b51a1a] to-[#d93630] text-white py-4 rounded-full font-bold text-lg shadow-lg active:scale-95 transition-all">
+                    更新数据
+                </button>
+</div>
+</section>
+<!-- Section 2: Weight Trend Chart -->
+<section class="space-y-4">
+<div class="flex justify-between items-center px-2">
+<h2 class="headline-font text-lg font-bold">体重趋势 (30天)</h2>
+<div class="flex gap-2">
+<span class="text-xs bg-surface-container-highest px-3 py-1 rounded-full font-bold text-on-surface-variant">2月 - 3月</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 aspect-[16/10] flex flex-col relative overflow-hidden">
+<div class="flex-1 flex items-end justify-between gap-1 mb-6">
+<!-- Faux Line Chart using Dividers & Spacing -->
+<div class="w-2 bg-primary/10 rounded-t-full" style="height: 60%"></div>
+<div class="w-2 bg-primary/15 rounded-t-full" style="height: 65%"></div>
+<div class="w-2 bg-primary/20 rounded-t-full" style="height: 62%"></div>
+<div class="w-2 bg-primary/30 rounded-t-full" style="height: 58%"></div>
+<div class="w-2 bg-primary/40 rounded-t-full" style="height: 55%"></div>
+<div class="w-2 bg-primary/50 rounded-t-full" style="height: 50%"></div>
+<div class="w-2 bg-primary/60 rounded-t-full" style="height: 45%"></div>
+<div class="w-2 bg-primary/80 rounded-t-full" style="height: 48%"></div>
+<div class="w-2 bg-primary rounded-t-full" style="height: 42%"></div>
+<div class="w-2 bg-primary/10 rounded-t-full" style="height: 38%"></div>
+<div class="w-2 bg-primary/15 rounded-t-full" style="height: 40%"></div>
+<div class="w-2 bg-primary/20 rounded-t-full" style="height: 44%"></div>
+<div class="w-2 bg-primary/30 rounded-t-full" style="height: 41%"></div>
+<div class="w-2 bg-primary/40 rounded-t-full" style="height: 35%"></div>
+</div>
+<div class="flex justify-between text-[10px] text-on-surface-variant font-bold px-1">
+<span>2月14</span>
+<span>2月24</span>
+<span>今日</span>
+</div>
+<!-- Absolute point marker -->
+<div class="absolute right-12 top-[58%] flex flex-col items-center">
+<div class="bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-md mb-1 shadow-md">71.2kg</div>
+<div class="w-3 h-3 bg-primary rounded-full ring-4 ring-white"></div>
+</div>
+</div>
+</section>
+<!-- Section 3: Body Measurements Grid -->
+<section class="space-y-4">
+<div class="flex justify-between items-center px-2">
+<h2 class="headline-font text-lg font-bold">身体维度</h2>
+<button class="text-primary text-sm font-bold flex items-center gap-1">
+                    查看详情 <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Chest -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between min-h-[120px]">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-on-surface-variant tracking-wider">胸围</span>
+<span class="material-symbols-outlined text-primary text-lg">straighten</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-black">98.5</span>
+<span class="text-[10px] text-on-surface-variant font-bold">CM</span>
+</div>
+<span class="text-[10px] text-tertiary font-bold flex items-center">
+<span class="material-symbols-outlined text-[12px]">trending_down</span> -0.5 上月
+                        </span>
+</div>
+</div>
+<!-- Waist -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between min-h-[120px]">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-on-surface-variant tracking-wider">腰围</span>
+<span class="material-symbols-outlined text-primary text-lg">accessibility</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-black">78.2</span>
+<span class="text-[10px] text-on-surface-variant font-bold">CM</span>
+</div>
+<span class="text-[10px] text-tertiary font-bold flex items-center">
+<span class="material-symbols-outlined text-[12px]">trending_down</span> -1.2 上月
+                        </span>
+</div>
+</div>
+<!-- Hips -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between min-h-[120px]">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-on-surface-variant tracking-wider">臀围</span>
+<span class="material-symbols-outlined text-primary text-lg">fit_screen</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-black">94.0</span>
+<span class="text-[10px] text-on-surface-variant font-bold">CM</span>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold flex items-center">
+<span class="material-symbols-outlined text-[12px]">horizontal_rule</span> 0.0 上月
+                        </span>
+</div>
+</div>
+<!-- Arms -->
+<div class="bg-surface-container-lowest p-5 rounded-lg flex flex-col justify-between min-h-[120px]">
+<div class="flex justify-between items-start">
+<span class="text-xs font-bold text-on-surface-variant tracking-wider">臂围</span>
+<span class="material-symbols-outlined text-primary text-lg">exercise</span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-black">34.5</span>
+<span class="text-[10px] text-on-surface-variant font-bold">CM</span>
+</div>
+<span class="text-[10px] text-primary font-bold flex items-center">
+<span class="material-symbols-outlined text-[12px]">trending_up</span> +0.3 上月
+                        </span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: BMI Display -->
+<section class="space-y-4">
+<h2 class="headline-font text-lg font-bold px-2">BMI 指数分析</h2>
+<div class="bg-surface-container-lowest rounded-xl p-6 shadow-sm overflow-hidden relative">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-black text-on-surface">22.4</span>
+<span class="bg-tertiary/10 text-tertiary text-xs px-3 py-1 rounded-full font-bold">正常范围</span>
+</div>
+<span class="material-symbols-outlined text-3xl text-primary/20">monitor_weight</span>
+</div>
+<div class="space-y-4">
+<div class="h-3 w-full bg-surface-container-high rounded-full flex overflow-hidden">
+<div class="h-full bg-blue-400/60" style="width: 25%"></div>
+<div class="h-full bg-tertiary" style="width: 30%"></div>
+<div class="h-full bg-orange-400/60" style="width: 20%"></div>
+<div class="h-full bg-red-400/60" style="width: 25%"></div>
+</div>
+<div class="flex justify-between text-[10px] font-bold text-on-surface-variant">
+<span class="w-1/4 text-center">偏瘦</span>
+<span class="w-1/4 text-center text-tertiary">正常</span>
+<span class="w-1/4 text-center">超重</span>
+<span class="w-1/4 text-center">肥胖</span>
+</div>
+</div>
+<p class="mt-6 text-sm text-on-surface-variant leading-relaxed">
+                    你的 BMI 处于理想范围。保持均衡饮食与定期锻炼，有助于维持当前健康状态。数据仅存储于本地，您的隐私对我们至关重要。
+                </p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-8 pt-3 bg-white/80 dark:bg-gray-900/80 backdrop-blur-2xl rounded-t-xl z-50 shadow-[0_-8px_32px_rgba(0,0,0,0.06)]">
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2.5 hover:text-red-600 transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[11px] font-medium tracking-tight headline-font mt-1">首页</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#b51a1a] to-[#d93630] text-white rounded-full px-6 py-2.5 haptic-like scale transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="text-[11px] font-medium tracking-tight headline-font mt-1">追踪</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2.5 hover:text-red-600 transition-colors" href="#">
+<span class="material-symbols-outlined">legend_toggle</span>
+<span class="text-[11px] font-medium tracking-tight headline-font mt-1">分析</span>
+</a>
+<a class="flex flex-col items-center justify-center text-gray-400 dark:text-gray-500 px-5 py-2.5 hover:text-red-600 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[11px] font-medium tracking-tight headline-font mt-1">我的</span>
+</a>
+</nav>
+</body></html>
