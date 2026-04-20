@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zen Kinetic - Progress Tracking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#d9dadc",
+                        "secondary": "#9e4038",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "inverse-surface": "#2e3132",
+                        "error-container": "#ffdad6",
+                        "outline": "#8f706c",
+                        "secondary-container": "#fe8a7d",
+                        "primary": "#b51a1a",
+                        "on-primary-fixed-variant": "#93000a",
+                        "surface-variant": "#e1e2e4",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#5b403d",
+                        "surface-tint": "#b91d1c",
+                        "secondary-fixed-dim": "#ffb4ab",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#5fd9d0",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#00201e",
+                        "on-secondary-container": "#75221c",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f0f1f3",
+                        "surface-container-high": "#e7e8ea",
+                        "primary-fixed": "#ffdad6",
+                        "on-secondary-fixed-variant": "#7f2923",
+                        "on-primary-fixed": "#410002",
+                        "tertiary": "#006762",
+                        "surface-container": "#edeef0",
+                        "outline-variant": "#e4beb9",
+                        "inverse-primary": "#ffb4ab",
+                        "surface": "#f8f9fb",
+                        "primary-container": "#d93630",
+                        "tertiary-fixed": "#7ef6ec",
+                        "on-tertiary-fixed-variant": "#00504c",
+                        "on-secondary-fixed": "#410002",
+                        "on-background": "#191c1e",
+                        "surface-container-highest": "#e1e2e4",
+                        "surface-bright": "#f8f9fb",
+                        "on-primary-container": "#fffbff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdad6",
+                        "background": "#f8f9fb",
+                        "surface-container-low": "#f2f4f6",
+                        "on-tertiary-container": "#f3fffd",
+                        "tertiary-container": "#00837c",
+                        "primary-fixed-dim": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            gap: 1.5rem;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl flex justify-between items-center w-full px-6 py-4 fixed top-0 z-50 shadow-sm shadow-red-900/5">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer" data-icon="menu">menu</span>
+<span class="text-xl font-bold tracking-tighter text-red-700 dark:text-red-500 font-['Plus_Jakarta_Sans']">Zen Kinetic</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="portrait of a focused professional athlete with a calm expression in a minimalist studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYrP2h_u3Tjrye9n9q4rtZpCh9xG81a71_5052B74cPjmFyY1t0SGg4mYTin3S1BryKeLuJ_wUJzfo0GpVrCkCXhYVfVggL6RoL8djoFUMiurW1plsa6KPk6xwBTD3AKtKVCuYEuC366Iya5KFrTmtCt0FPrQBeqb2zeUPUbBjo7yc6i9Gkct_IVzMEzAAJmp9T_2bJI3qH2DOyi9uPqIPgp0jXVG03iBXnz9urGFFLMf2ML25GgstcXwSqkcaWYmASfTePoN-Xtyn"/>
+</div>
+</header>
+<main class="mt-24 px-6 max-w-5xl mx-auto">
+<!-- Header Section -->
+<div class="mb-10">
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-2">进度统计</h1>
+<p class="text-on-surface-variant max-w-md">追溯你的每一次心跳，记录通往卓越的每一步。</p>
+</div>
+<!-- Bento Layout for Stats -->
+<div class="bento-grid">
+<!-- Weight Trend Chart - Large Bento Item -->
+<div class="col-span-6 lg:col-span-4 bg-surface-container-lowest rounded-xl p-8 flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<div>
+<span class="text-sm font-semibold text-secondary uppercase tracking-widest">身体指标</span>
+<h2 class="text-2xl font-bold mt-1">体重趋势</h2>
+</div>
+<div class="text-right">
+<span class="text-3xl font-black text-primary">74.2 <small class="text-sm font-normal text-on-surface-variant">kg</small></span>
+<p class="text-xs text-tertiary font-medium flex items-center justify-end gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_down">trending_down</span>
+                            本月减少 1.5kg
+                        </p>
+</div>
+</div>
+<!-- Visual Chart Representation (SVG) -->
+<div class="relative h-48 w-full mt-4">
+<svg class="w-full h-full preserve-3d" viewbox="0 0 400 100">
+<defs>
+<lineargradient id="chartGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#b51a1a" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#b51a1a" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,80 Q50,75 100,60 T200,40 T300,50 T400,20 L400,100 L0,100 Z" fill="url(#chartGradient)"></path>
+<path d="M0,80 Q50,75 100,60 T200,40 T300,50 T400,20" fill="none" stroke="#b51a1a" stroke-linecap="round" stroke-width="3"></path>
+<!-- Data Points -->
+<circle cx="100" cy="60" fill="#b51a1a" r="4"></circle>
+<circle cx="200" cy="40" fill="#b51a1a" r="4"></circle>
+<circle cx="400" cy="20" fill="#b51a1a" r="4"></circle>
+</svg>
+<div class="flex justify-between mt-4 text-[10px] text-on-surface-variant font-medium uppercase tracking-tighter">
+<span>第一周</span><span>第二周</span><span>第三周</span><span>本周</span>
+</div>
+</div>
+</div>
+<!-- Weekly Activity Frequency - Medium Bento Item -->
+<div class="col-span-6 lg:col-span-2 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between">
+<div>
+<span class="text-sm font-semibold text-secondary uppercase tracking-widest">每周频率</span>
+<h2 class="text-2xl font-bold mt-1">活跃程度</h2>
+</div>
+<div class="grid grid-cols-7 gap-2 mt-8">
+<!-- Day Dots -->
+<div class="flex flex-col items-center gap-2">
+<span class="text-[10px] text-on-surface-variant">一</span>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-red-500/20">
+<span class="material-symbols-outlined text-white text-sm" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-[10px] text-on-surface-variant">二</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high"></div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-[10px] text-on-surface-variant">三</span>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-red-500/20">
+<span class="material-symbols-outlined text-white text-sm" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-[10px] text-on-surface-variant">四</span>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-red-500/20">
+<span class="material-symbols-outlined text-white text-sm" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-[10px] text-on-surface-variant">五</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high"></div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-[10px] text-on-surface-variant">六</span>
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-red-500/20">
+<span class="material-symbols-outlined text-white text-sm" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2">
+<span class="text-[10px] text-on-surface-variant">日</span>
+<div class="w-8 h-8 rounded-full bg-surface-container-high"></div>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/10">
+<p class="text-sm font-bold">连续达标 14 天</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full w-[65%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Personal Bests - Long Horizontal Bento Item -->
+<div class="col-span-6 bg-surface-container-lowest rounded-xl p-8">
+<div class="mb-8">
+<span class="text-sm font-semibold text-secondary uppercase tracking-widest">个人纪录</span>
+<h2 class="text-2xl font-bold mt-1">荣誉殿堂</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- PR Item 1 -->
+<div class="flex items-center gap-6 group cursor-pointer transition-transform duration-300 hover:translate-y-[-4px]">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center shadow-xl shadow-red-500/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="fitness_center">fitness_center</span>
+</div>
+<div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">最高负重</p>
+<p class="text-2xl font-black text-on-surface">120 <span class="text-sm font-normal">kg</span></p>
+<p class="text-[10px] text-tertiary">硬拉 · 2023.11.12</p>
+</div>
+</div>
+<!-- PR Item 2 -->
+<div class="flex items-center gap-6 group cursor-pointer transition-transform duration-300 hover:translate-y-[-4px]">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-700 flex items-center justify-center shadow-xl shadow-teal-500/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="bolt">bolt</span>
+</div>
+<div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">最长连续</p>
+<p class="text-2xl font-black text-on-surface">24 <span class="text-sm font-normal">days</span></p>
+<p class="text-[10px] text-tertiary">正念冥想 · 至今</p>
+</div>
+</div>
+<!-- PR Item 3 -->
+<div class="flex items-center gap-6 group cursor-pointer transition-transform duration-300 hover:translate-y-[-4px]">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center shadow-xl shadow-orange-500/20">
+<span class="material-symbols-outlined text-white text-3xl" data-icon="timer">timer</span>
+</div>
+<div>
+<p class="text-on-surface-variant text-xs font-bold uppercase tracking-wider">单次最长</p>
+<p class="text-2xl font-black text-on-surface">95 <span class="text-sm font-normal">min</span></p>
+<p class="text-[10px] text-tertiary">高效燃脂 · 昨天</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Kinetic Insights - Small Callout -->
+<div class="col-span-6 md:col-span-3 bg-tertiary-container rounded-xl p-8 text-on-tertiary flex gap-6 items-center">
+<span class="material-symbols-outlined text-4xl opacity-50" data-icon="psychology">psychology</span>
+<div>
+<h3 class="font-bold text-lg leading-tight">动力分析</h3>
+<p class="text-sm opacity-90 mt-1">根据你的数据，你在早晨 7:00 的锻炼效率比平时高出 15%。建议保持晨间训练。</p>
+</div>
+</div>
+<!-- Health Snapshot Card -->
+<div class="col-span-6 md:col-span-3 relative rounded-xl overflow-hidden group">
+<img alt="Nutrition focus" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="dramatic lighting on healthy athlete meal with fresh greens and protein in a high-end minimalist kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjUDZ3dUQc7S_KWFUUa3T4M_oQPTYhY-60rh81qJbHo8fMhoesoopYfykSKtPcB_HsqGVlkIsdU0X8n8fpaznTSCptAXL5zbkYmw_0W-v_hw4ctj-TlI-4UzjBljYPczbcg4cZk6ezp15Y9BDyrJdJFMLF3BO63mWSDx5cOWWKMYEP6KcH_7ec71Z-SQylX2y3zEPdAYGwIAkNiyFynJ82eSSm2kQ0YH6jQHPtfI86LNE2G79KoEOgjDE5KCy9SgbaFM9HqlTJ0l7s"/>
+<div class="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+<div class="relative p-8 h-full flex flex-col justify-end">
+<span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-[10px] font-bold text-white uppercase tracking-widest w-fit mb-2">营养建议</span>
+<h3 class="text-xl font-bold text-white">摄入更多高质量蛋白</h3>
+<p class="text-xs text-white/80 mt-1">达成肌肉恢复目标的最佳方式。</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Navigation Components based on JSON -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white/70 dark:bg-zinc-900/70 backdrop-blur-2xl rounded-t-[3rem] shadow-[0_-8px_40px_-12px_rgba(181,26,26,0.12)]">
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 p-2 hover:text-red-600 dark:hover:text-red-400 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium tracking-wide uppercase mt-1">Discover</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 p-2 hover:text-red-600 dark:hover:text-red-400 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="timer">timer</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium tracking-wide uppercase mt-1">Log</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-red-600 to-red-500 text-white rounded-full p-3 mb-1 scale-110 shadow-lg shadow-red-500/30" href="#">
+<span class="material-symbols-outlined" data-icon="insert_chart" data-weight="fill" style="font-variation-settings: 'FILL' 1;">insert_chart</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium tracking-wide uppercase mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-400 dark:text-zinc-500 p-2 hover:text-red-600 dark:hover:text-red-400 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] text-[10px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+<!-- Contextual FAB - Only for relevant screens (Suppress here as this is a dashboard/details style page) -->
+</body></html>
