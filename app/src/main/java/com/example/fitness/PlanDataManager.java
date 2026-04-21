@@ -52,7 +52,8 @@ public class PlanDataManager {
     // 获取所有自定义计划
     public List<CustomPlan> getCustomPlans() {
         String json = prefs.getString(CUSTOM_PLANS_KEY, "[]");
-        Type type = new TypeToken<List<CustomPlan>>(){}.getType();
+        Type type = new TypeToken<List<CustomPlan>>() {
+        }.getType();
         List<CustomPlan> plans = gson.fromJson(json, type);
         return plans != null ? plans : new ArrayList<>();
     }
@@ -89,7 +90,8 @@ public class PlanDataManager {
     // 获取训练历史
     public List<WorkoutSession> getWorkoutHistory() {
         String json = prefs.getString(WORKOUT_HISTORY_KEY, "[]");
-        Type type = new TypeToken<List<WorkoutSession>>(){}.getType();
+        Type type = new TypeToken<List<WorkoutSession>>() {
+        }.getType();
         List<WorkoutSession> history = gson.fromJson(json, type);
         return history != null ? history : new ArrayList<>();
     }
@@ -188,7 +190,8 @@ public class PlanDataManager {
     // 获取所有身体指标
     public List<BodyMetric> getBodyMetrics() {
         String json = prefs.getString(BODY_METRICS_KEY, "[]");
-        Type type = new TypeToken<List<BodyMetric>>(){}.getType();
+        Type type = new TypeToken<List<BodyMetric>>() {
+        }.getType();
         List<BodyMetric> metrics = gson.fromJson(json, type);
         return metrics != null ? metrics : new ArrayList<>();
     }
@@ -275,3 +278,4 @@ public class PlanDataManager {
         String json = gson.toJson(metrics);
         prefs.edit().putString(BODY_METRICS_KEY, json).apply();
     }
+}
