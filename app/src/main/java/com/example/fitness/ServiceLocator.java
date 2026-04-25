@@ -11,6 +11,9 @@ import com.example.fitness.domain.repository.PlanRepository;
 import com.example.fitness.domain.repository.WorkoutRepository;
 import com.example.fitness.domain.service.BodyMetricAnalysisService;
 import com.example.fitness.domain.service.WorkoutStatsService;
+import com.example.fitness.domain.usecase.CalculateStreakDaysUseCase;
+import com.example.fitness.domain.usecase.GetWeeklyWorkoutDaysUseCase;
+import com.example.fitness.domain.usecase.LoadPersonalRecordsUseCase;
 import java.util.List;
 
 /**
@@ -36,11 +39,17 @@ public class ServiceLocator {
     private WorkoutStatsService workoutStatsService;
     private BodyMetricAnalysisService bodyMetricAnalysisService;
     
+    // UseCases
+    private GetWeeklyWorkoutDaysUseCase getWeeklyWorkoutDaysUseCase;
+    private CalculateStreakDaysUseCase calculateStreakDaysUseCase;
+    private LoadPersonalRecordsUseCase loadPersonalRecordsUseCase;
+    
     private ServiceLocator(Context context) {
         this.context = context.getApplicationContext();
         initializeRepositories();
         initializeUserPreferences();
         initializeServices();
+        initializeUseCases();
     }
     
     public static synchronized ServiceLocator getInstance(Context context) {
@@ -74,6 +83,15 @@ public class ServiceLocator {
         this.bodyMetricAnalysisService = new BodyMetricAnalysisService(bodyMetricRepository);
     }
     
+    /**
+     * 初始化所有UseCase
+     */
+    private void initializeUseCases() {
+        this.getWeeklyWorkoutDaysUseCase = new GetWeeklyWorkoutDaysUseCase(workoutRepository);
+        this.calculateStreakDaysUseCase = new CalculateStreakDaysUseCase();
+        this.loadPersonalRecordsUseCase = new LoadPersonalRecordsUseCase(workoutRepository);
+    }
+    
     // ==================== Repository访问方法 ====================
     
     public PlanRepository getPlanRepository() {
@@ -102,6 +120,20 @@ public class ServiceLocator {
     
     public BodyMetricAnalysisService getBodyMetricAnalysisService() {
         return bodyMetricAnalysisService;
+    }
+    
+    // ==================== UseCase访问方法 ====================
+    
+    public GetWeeklyWorkoutDaysUseCase getGetWeeklyWorkoutDaysUseCase() {
+        return getWeeklyWorkoutDaysUseCase;
+    }
+    
+    public CalculateStreakDaysUseCase getCalculateStreakDaysUseCase() {
+        return calculateStreakDaysUseCase;
+    }
+    
+    public LoadPersonalRecordsUseCase getLoadPersonalRecordsUseCase() {
+        return loadPersonalRecordsUseCase;
     }
     
     /**
