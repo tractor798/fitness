@@ -2,6 +2,10 @@ package com.example.fitness.domain.usecase;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import java.time.LocalDate;
 
 /**
@@ -23,6 +27,7 @@ public class GetTodayStepsUseCase {
      * 执行用例，检查并返回今日的基准步数状态
      * @return BaselineResult 包含基准值和是否为新的一天
      */
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public BaselineResult execute() {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         String today = LocalDate.now().toString();

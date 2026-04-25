@@ -1,8 +1,11 @@
 package com.example.fitness.domain.usecase;
 
+import android.os.Build;
+
 import com.example.fitness.domain.repository.WorkoutRepository;
 import com.example.fitness.domain.model.WorkoutSession;
 
+import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.HashSet;
@@ -33,9 +36,12 @@ public class GetWeeklyWorkoutDaysUseCase {
         
         for (WorkoutSession session : sessions) {
             long timestamp = session.getEndTime() > 0 ? session.getEndTime() : session.getStartTime();
-            LocalDate date = java.time.Instant.ofEpochMilli(timestamp)
-                    .atZone(ZoneId.systemDefault())
-                    .toLocalDate();
+            LocalDate date = null;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                date = Instant.ofEpochMilli(timestamp)
+                        .atZone(ZoneId.systemDefault())
+                        .toLocalDate();
+            }
             days.add(date);
         }
         
