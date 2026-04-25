@@ -23,6 +23,7 @@ public class SQLiteWorkoutRepository implements WorkoutRepository {
     public synchronized void saveSession(WorkoutSession session) {
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
+        values.put("id", session.getId());
         values.put("planName", session.getPlanName());
         values.put("startTime", session.getStartTime());
         values.put("endTime", session.getEndTime());
@@ -47,7 +48,9 @@ public class SQLiteWorkoutRepository implements WorkoutRepository {
         try {
             cursor = db.query("workout_sessions", null, null, null, null, null, "startTime DESC");
             while (cursor.moveToNext()) {
+                String id = cursor.getString(cursor.getColumnIndexOrThrow("id"));
                 WorkoutSession session = new WorkoutSession(cursor.getString(cursor.getColumnIndexOrThrow("planName")));
+                session.setId(id);
                 session.setStartTime(cursor.getLong(cursor.getColumnIndexOrThrow("startTime")));
                 session.setEndTime(cursor.getLong(cursor.getColumnIndexOrThrow("endTime")));
                 session.setDuration(cursor.getLong(cursor.getColumnIndexOrThrow("duration")));
