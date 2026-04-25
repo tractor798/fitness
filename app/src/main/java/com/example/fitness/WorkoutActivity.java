@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.fitness.domain.model.CustomPlan;
+import com.example.fitness.domain.model.Exercise;
 import com.example.fitness.domain.model.PlanItem;
 import com.example.fitness.domain.model.WorkoutSession;
 

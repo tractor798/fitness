@@ -14,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.example.fitness.config.AppConfig;
 import com.example.fitness.domain.model.CustomPlan;
+import com.example.fitness.domain.model.Exercise;
 import com.example.fitness.domain.model.WorkoutSession;
 
 import java.lang.ref.WeakReference;

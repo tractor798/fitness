@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness.domain.model.CustomPlan;
+import com.example.fitness.domain.model.Exercise;
 import com.example.fitness.domain.model.PlanItem;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 

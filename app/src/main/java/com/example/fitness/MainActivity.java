@@ -21,6 +21,7 @@ import androidx.core.content.ContextCompat;
 
 import com.example.fitness.config.AppConfig;
 import com.example.fitness.domain.model.WorkoutSession;
+import com.example.fitness.domain.model.WorkoutStats;
 import com.example.fitness.ui.view.CircularProgressView;
 import com.example.fitness.ui.view.WeeklyTrendChartView;
 import com.example.fitness.util.ImageLoader;
