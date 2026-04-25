@@ -4,9 +4,10 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.fitness.domain.model.BodyMetric;
-import com.example.fitness.data.repository.BodyMetricRepository;
+import com.example.fitness.domain.repository.BodyMetricRepository;
 
 import java.util.ArrayList;
 import java.util.List;

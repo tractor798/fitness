@@ -4,11 +4,15 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.fitness.domain.model.CustomPlan;
 import com.example.fitness.domain.model.Exercise;
-import com.example.fitness.data.repository.PlanRepository;
+import com.example.fitness.domain.repository.PlanRepository;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 

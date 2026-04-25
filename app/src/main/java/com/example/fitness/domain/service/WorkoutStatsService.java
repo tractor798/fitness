@@ -4,7 +4,7 @@ import android.os.Build;
 
 import com.example.fitness.domain.model.WorkoutSession;
 import com.example.fitness.domain.model.WorkoutStats;
-import com.example.fitness.data.repository.WorkoutRepository;
+import com.example.fitness.domain.repository.WorkoutRepository;
 
 import java.time.LocalDate;
 import java.time.ZoneId;
