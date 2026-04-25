@@ -23,8 +23,6 @@ import com.example.fitness.domain.usecase.SaveCustomPlanUseCase;
 import com.example.fitness.domain.usecase.LoadWorkoutHistoryUseCase;
 import com.example.fitness.domain.usecase.SaveBodyMetricUseCase;
 import com.example.fitness.domain.usecase.SaveWorkoutSessionUseCase;
-import com.example.fitness.domain.usecase.LoadUserPreferencesUseCase;
-import com.example.fitness.domain.usecase.SaveUserPreferencesUseCase;
 import java.util.List;
 
 /**
@@ -63,8 +61,6 @@ public class ServiceLocator {
     private LoadWorkoutHistoryUseCase loadWorkoutHistoryUseCase;
     private SaveBodyMetricUseCase saveBodyMetricUseCase;
     private SaveWorkoutSessionUseCase saveWorkoutSessionUseCase;
-    private LoadUserPreferencesUseCase loadUserPreferencesUseCase;
-    private SaveUserPreferencesUseCase saveUserPreferencesUseCase;
     
     private ServiceLocator(Context context) {
         this.context = context.getApplicationContext();
@@ -121,8 +117,6 @@ public class ServiceLocator {
         this.loadWorkoutHistoryUseCase = new LoadWorkoutHistoryUseCase(workoutRepository);
         this.saveBodyMetricUseCase = new SaveBodyMetricUseCase(bodyMetricRepository);
         this.saveWorkoutSessionUseCase = new SaveWorkoutSessionUseCase(workoutRepository);
-        this.loadUserPreferencesUseCase = new LoadUserPreferencesUseCase(userPreferencesRepository);
-        this.saveUserPreferencesUseCase = new SaveUserPreferencesUseCase(userPreferencesRepository);
     }
     
     // ==================== Repository访问方法 ====================
@@ -203,14 +197,6 @@ public class ServiceLocator {
     
     public SaveWorkoutSessionUseCase getSaveWorkoutSessionUseCase() {
         return saveWorkoutSessionUseCase;
-    }
-    
-    public LoadUserPreferencesUseCase getLoadUserPreferencesUseCase() {
-        return loadUserPreferencesUseCase;
-    }
-    
-    public SaveUserPreferencesUseCase getSaveUserPreferencesUseCase() {
-        return saveUserPreferencesUseCase;
     }
     
     /**
