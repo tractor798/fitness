@@ -17,6 +17,7 @@ import com.example.fitness.domain.usecase.LoadPersonalRecordsUseCase;
 import com.example.fitness.domain.usecase.GetTodayStepsUseCase;
 import com.example.fitness.domain.usecase.LoadBodyMetricOverviewUseCase;
 import com.example.fitness.domain.usecase.LoadFilteredPlansUseCase;
+import com.example.fitness.domain.usecase.CreatePresetExercisesUseCase;
 import java.util.List;
 
 /**
@@ -49,6 +50,7 @@ public class ServiceLocator {
     private GetTodayStepsUseCase getTodayStepsUseCase;
     private LoadBodyMetricOverviewUseCase loadBodyMetricOverviewUseCase;
     private LoadFilteredPlansUseCase loadFilteredPlansUseCase;
+    private CreatePresetExercisesUseCase createPresetExercisesUseCase;
     
     private ServiceLocator(Context context) {
         this.context = context.getApplicationContext();
@@ -99,6 +101,7 @@ public class ServiceLocator {
         this.getTodayStepsUseCase = new GetTodayStepsUseCase(context);
         this.loadBodyMetricOverviewUseCase = new LoadBodyMetricOverviewUseCase(bodyMetricRepository, bodyMetricAnalysisService);
         this.loadFilteredPlansUseCase = new LoadFilteredPlansUseCase(planRepository);
+        this.createPresetExercisesUseCase = new CreatePresetExercisesUseCase();
     }
     
     // ==================== Repository访问方法 ====================
@@ -155,6 +158,10 @@ public class ServiceLocator {
     
     public LoadFilteredPlansUseCase getLoadFilteredPlansUseCase() {
         return loadFilteredPlansUseCase;
+    }
+    
+    public CreatePresetExercisesUseCase getCreatePresetExercisesUseCase() {
+        return createPresetExercisesUseCase;
     }
     
     /**
