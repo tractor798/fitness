@@ -1,5 +1,6 @@
 package com.example.fitness.ui.adapter;
 
+import com.example.fitness.R;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

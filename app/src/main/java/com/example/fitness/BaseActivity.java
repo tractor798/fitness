@@ -6,6 +6,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
+import com.example.fitness.ui.activity.MainActivity;
+import com.example.fitness.ui.activity.PlanActivity;
+import com.example.fitness.ui.activity.StatsActivity;
+import com.example.fitness.ui.activity.ProfileActivity;
 
 public abstract class BaseActivity extends AppCompatActivity {
 

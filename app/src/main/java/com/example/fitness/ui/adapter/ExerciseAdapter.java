@@ -1,5 +1,6 @@
 package com.example.fitness.ui.adapter;
 
+import com.example.fitness.R;
 import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;

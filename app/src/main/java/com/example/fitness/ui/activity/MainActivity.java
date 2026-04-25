@@ -1,5 +1,9 @@
 package com.example.fitness.ui.activity;
 
+import com.example.fitness.R;
+import com.example.fitness.BaseActivity;
+import com.example.fitness.ServiceLocator;
+import com.example.fitness.ui.activity.PlanActivity;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;

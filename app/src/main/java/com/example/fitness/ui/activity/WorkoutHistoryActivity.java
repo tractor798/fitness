@@ -1,5 +1,9 @@
 package com.example.fitness.ui.activity;
 
+import com.example.fitness.R;
+import com.example.fitness.BaseActivity;
+import com.example.fitness.ServiceLocator;
+import com.example.fitness.ui.adapter.WorkoutHistoryAdapter;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;

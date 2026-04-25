@@ -1,5 +1,9 @@
 package com.example.fitness.ui.activity;
 
+import com.example.fitness.R;
+import com.example.fitness.BaseActivity;
+import com.example.fitness.ui.adapter.ExerciseAdapter;
+import com.example.fitness.ui.adapter.WorkoutExerciseAdapter;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;

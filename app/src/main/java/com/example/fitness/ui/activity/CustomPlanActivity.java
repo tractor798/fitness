@@ -1,5 +1,10 @@
 package com.example.fitness.ui.activity;
 
+import com.example.fitness.R;
+import com.example.fitness.BaseActivity;
+import com.example.fitness.ServiceLocator;
+import com.example.fitness.ui.adapter.ExerciseAdapter;
+import com.example.fitness.ui.activity.PlanActivity;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
