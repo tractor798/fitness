@@ -1,6 +1,6 @@
 package com.example.fitness.data.repository;
 
-import com.example.fitness.WorkoutSession;
+import com.example.fitness.domain.model.WorkoutSession;
 import java.util.List;
 
 /**

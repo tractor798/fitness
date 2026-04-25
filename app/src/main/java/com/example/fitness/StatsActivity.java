@@ -14,6 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 
 import com.example.fitness.config.AppConfig;
+import com.example.fitness.domain.model.BodyMetric;
+import com.example.fitness.domain.model.WorkoutSession;
 import com.example.fitness.ui.view.LineChartView;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -27,7 +29,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * 进度统计页��? */
+ * 进度统计页
+ */
 public class StatsActivity extends BaseActivity {
 
     private TextView currentWeightText;

@@ -2,8 +2,8 @@ package com.example.fitness.domain.service;
 
 import android.os.Build;
 
-import com.example.fitness.WorkoutSession;
-import com.example.fitness.WorkoutStats;
+import com.example.fitness.domain.model.WorkoutSession;
+import com.example.fitness.domain.model.WorkoutStats;
 import com.example.fitness.data.repository.WorkoutRepository;
 
 import java.time.LocalDate;

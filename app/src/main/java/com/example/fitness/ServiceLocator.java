@@ -8,6 +8,7 @@ import com.example.fitness.data.local.UserPreferences;
 import com.example.fitness.data.repository.BodyMetricRepository;
 import com.example.fitness.data.repository.PlanRepository;
 import com.example.fitness.data.repository.WorkoutRepository;
+import com.example.fitness.domain.model.CustomPlan;
 import com.example.fitness.domain.service.BodyMetricAnalysisService;
 import com.example.fitness.domain.service.WorkoutStatsService;
 import java.util.List;

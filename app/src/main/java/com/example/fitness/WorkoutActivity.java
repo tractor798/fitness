@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.fitness.domain.model.CustomPlan;
+import com.example.fitness.domain.model.PlanItem;
+import com.example.fitness.domain.model.WorkoutSession;
 
 import java.util.ArrayList;
 import java.util.List;

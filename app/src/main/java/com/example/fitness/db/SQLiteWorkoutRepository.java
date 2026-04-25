@@ -5,7 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.fitness.WorkoutSession;
+import com.example.fitness.domain.model.WorkoutSession;
 import com.example.fitness.data.repository.WorkoutRepository;
 
 import java.util.ArrayList;

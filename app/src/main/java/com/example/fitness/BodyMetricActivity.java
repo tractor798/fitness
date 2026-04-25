@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitness.config.AppConfig;
+import com.example.fitness.domain.model.BodyMetric;
 
 import java.util.List;
 

@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness.domain.model.BodyMetric;
+
 import java.util.List;
 
 public class BodyMetricAdapter extends RecyclerView.Adapter<BodyMetricAdapter.BodyMetricViewHolder> {

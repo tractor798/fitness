@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.fitness.domain.model.Exercise;
 import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;

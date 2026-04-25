@@ -3,7 +3,7 @@ package com.example.fitness.data.local;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import com.example.fitness.CustomPlan;
+import com.example.fitness.domain.model.CustomPlan;
 import com.example.fitness.data.repository.PlanRepository;
 import com.example.fitness.db.SQLitePlanRepository;
 import com.google.gson.Gson;

@@ -12,6 +12,8 @@ import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness.domain.model.WorkoutSession;
+
 import java.time.DayOfWeek;
 import java.time.Instant;
 import java.time.LocalDate;

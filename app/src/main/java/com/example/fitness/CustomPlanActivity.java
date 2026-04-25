@@ -13,6 +13,9 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.fitness.domain.model.CustomPlan;
+import com.example.fitness.domain.model.Exercise;
+
 import java.util.ArrayList;
 import java.util.List;
 

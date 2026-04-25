@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
 
-import com.example.fitness.WorkoutSession;
+import com.example.fitness.domain.model.WorkoutSession;
 import com.example.fitness.config.AppConfig;
 import com.example.fitness.data.repository.WorkoutRepository;
 import com.example.fitness.db.SQLiteWorkoutRepository;
