@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitness">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,15 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PlanActivity" />
-        <activity android:name=".StatsActivity" />
-        <activity android:name=".BodyMetricActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".WorkoutActivity" />
-        <activity android:name=".TimerActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".CustomPlanActivity" />
-        <activity android:name=".WorkoutHistoryActivity" />
+        <activity android:name=".ui.activity.PlanActivity" />
+        <activity android:name=".ui.activity.StatsActivity" />
+        <activity android:name=".ui.activity.BodyMetricActivity" />
+        <activity android:name=".ui.activity.ProfileActivity" />
+        <activity android:name=".ui.activity.WorkoutActivity" />
+        <activity android:name=".ui.activity.TimerActivity" />
+        <activity android:name=".ui.activity.SettingsActivity" />
+        <activity android:name=".ui.activity.CustomPlanActivity" />
+        <activity android:name=".ui.activity.WorkoutHistoryActivity" />
     </application>
 
 </manifest>
