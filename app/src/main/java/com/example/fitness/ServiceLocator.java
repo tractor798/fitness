@@ -133,6 +133,12 @@ public class ServiceLocator {
         return bodyMetricRepository;
     }
     
+    // ==================== 用户偏好访问方法 ====================
+    
+    public UserPreferences getUserPreferences() {
+        return userPreferences;
+    }
+    
     // ==================== Service访问方法 ====================
     
     public WorkoutStatsService getWorkoutStatsService() {
