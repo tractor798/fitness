@@ -20,6 +20,7 @@ import com.example.fitness.domain.usecase.LoadFilteredPlansUseCase;
 import com.example.fitness.domain.usecase.CreatePresetExercisesUseCase;
 import com.example.fitness.domain.usecase.ClearAllDataUseCase;
 import com.example.fitness.domain.usecase.SaveCustomPlanUseCase;
+import com.example.fitness.domain.usecase.LoadWorkoutHistoryUseCase;
 import java.util.List;
 
 /**
@@ -55,6 +56,7 @@ public class ServiceLocator {
     private CreatePresetExercisesUseCase createPresetExercisesUseCase;
     private ClearAllDataUseCase clearAllDataUseCase;
     private SaveCustomPlanUseCase saveCustomPlanUseCase;
+    private LoadWorkoutHistoryUseCase loadWorkoutHistoryUseCase;
     
     private ServiceLocator(Context context) {
         this.context = context.getApplicationContext();
@@ -108,6 +110,7 @@ public class ServiceLocator {
         this.createPresetExercisesUseCase = new CreatePresetExercisesUseCase();
         this.clearAllDataUseCase = new ClearAllDataUseCase(this);
         this.saveCustomPlanUseCase = new SaveCustomPlanUseCase(planRepository);
+        this.loadWorkoutHistoryUseCase = new LoadWorkoutHistoryUseCase(workoutRepository);
     }
     
     // ==================== Repository访问方法 ====================
@@ -176,6 +179,10 @@ public class ServiceLocator {
     
     public SaveCustomPlanUseCase getSaveCustomPlanUseCase() {
         return saveCustomPlanUseCase;
+    }
+    
+    public LoadWorkoutHistoryUseCase getLoadWorkoutHistoryUseCase() {
+        return loadWorkoutHistoryUseCase;
     }
     
     /**
