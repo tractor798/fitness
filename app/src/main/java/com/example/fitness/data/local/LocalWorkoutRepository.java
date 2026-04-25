@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.example.fitness.domain.model.WorkoutSession;
 import com.example.fitness.config.AppConfig;
-import com.example.fitness.data.repository.WorkoutRepository;
+import com.example.fitness.domain.repository.WorkoutRepository;
 import com.example.fitness.db.SQLiteWorkoutRepository;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

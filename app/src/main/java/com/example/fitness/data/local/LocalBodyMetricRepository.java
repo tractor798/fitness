@@ -5,7 +5,7 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.example.fitness.domain.model.BodyMetric;
-import com.example.fitness.data.repository.BodyMetricRepository;
+import com.example.fitness.domain.repository.BodyMetricRepository;
 import com.example.fitness.db.SQLiteBodyMetricRepository;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
