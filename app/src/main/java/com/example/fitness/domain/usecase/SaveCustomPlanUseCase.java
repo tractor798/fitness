@@ -28,9 +28,7 @@ public class SaveCustomPlanUseCase {
             throw new IllegalArgumentException("计划名称不能为空");
         }
         
-        CustomPlan plan = new CustomPlan();
-        plan.setName(planName);
-        plan.setDescription(description != null ? description : "");
+        CustomPlan plan = new CustomPlan(planName, description != null ? description : "");
         plan.setCategory(category != null ? category : "通用");
         plan.setExercises(exercises);
         

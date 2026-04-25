@@ -2,7 +2,9 @@ package com.example.fitness.domain.usecase;
 
 import com.example.fitness.domain.repository.WorkoutRepository;
 import com.example.fitness.domain.model.WorkoutSession;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,8 +29,12 @@ public class LoadWorkoutHistoryUseCase {
         List<WorkoutSession> dailySessions = new ArrayList<>();
         
         for (WorkoutSession session : allSessions) {
-            LocalDate sessionDate = session.getDate();
-            if (sessionDate != null && sessionDate.equals(date)) {
+            // WorkoutSession使用startTime毫秒时间戳，需要转换为LocalDate进行比较
+            LocalDate sessionDate = Instant.ofEpochMilli(session.getStartTime())
+                    .atZone(ZoneId.systemDefault())
+                    .toLocalDate();
+            
+            if (sessionDate.equals(date)) {
                 dailySessions.add(session);
             }
         }
